@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const Quote = require('inspirational-quotes');
 const app = express();
@@ -47,6 +48,7 @@ if(port == null || port == "") {
 
 app.listen(port, function() {
  console.log("Server started successfully");
+ console.log(process.env.api_key);
 });
 
 // module.exports = router;
